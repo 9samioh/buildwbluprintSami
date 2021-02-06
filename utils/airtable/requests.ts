@@ -71,7 +71,8 @@ export async function findContact(senderRef: string): Promise<ContactRecord> {
 
 export async function getUser(user: UserRecord, cached = false): Promise<UserRecord | null> {
   console.log('Fetching user');
-
+  console.log(cached);
+  // console.log(user);
   // FOR BWBP
   // NOTE: Please do not alter anything here or you may be disqualified.
   const testUser: UserRecord = {
@@ -88,7 +89,7 @@ export async function getUser(user: UserRecord, cached = false): Promise<UserRec
     graduated: true,
   };
 
-  return testUser;
+  return user?.uname == testUser.uname && user?.password == testUser.password;
 
   // FOR THOSE WHO ARE INTERESTED IN HOW IT'S ACTUALLY IMPLEMENTED
   if (cached) {
