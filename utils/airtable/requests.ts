@@ -71,7 +71,6 @@ export async function findContact(senderRef: string): Promise<ContactRecord> {
 
 export async function getUser(user: UserRecord, cached = false): Promise<UserRecord | null> {
   console.log('Fetching user');
-  console.log(cached);
   // console.log(user);
   // FOR BWBP
   // NOTE: Please do not alter anything here or you may be disqualified.
